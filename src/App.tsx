@@ -1,6 +1,7 @@
 import React from "react";
 import "./App.css";
 import logo from './assets/img/logo.png';
+import Video from "./components/Video";
 
 function App() {
   return (
@@ -13,7 +14,11 @@ function App() {
       </div>
 
       <div className="app__videos">
-
+        <Video />
+        <Video />
+        <Video />
+        <Video />
+        <Video />
       </div>
     </div>
   );
