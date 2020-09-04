@@ -1,8 +1,6 @@
 ## InstaReels (React.js && Typescript &&  Firebase)
 
-<img src="" alt="InstaReels" />
-<img src="" alt="InstaReels" />
-
+<img src="https://github.com/vbeloti/instareels-web/blob/master/.github/img/instareels-1.png?raw=true" alt="InstaReels" />
 
 In the project directory, you can run:
 
