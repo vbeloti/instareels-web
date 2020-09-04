@@ -28,10 +28,6 @@ function App() {
           likes={452}
           shares={1560}
         />
-        <Video />
-        <Video />
-        <Video />
-        <Video />
       </div>
     </div>
   );
