@@ -44,10 +44,10 @@ const VideoFooter: React.FC<IVideoFooter> = ({
       </div>
       <div className="videoFooter__actions">
         <div className="videoFooter__actionsLeft">
-          <FavoriteIcon font-size="large" />
-          <ModeCommentIcon font-size="large" />
-          <SendIcon font-size="large" />
-          <MoreHorizIcon font-size="large" />
+          <FavoriteIcon />
+          <ModeCommentIcon />
+          <SendIcon />
+          <MoreHorizIcon />
         </div>
         <div className="videoFooter__actionsRight">
           <div className="videoFooter__stat">
