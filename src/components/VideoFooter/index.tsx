@@ -1,6 +1,10 @@
 import React from "react";
 import { Button, Avatar } from "@material-ui/core";
 import MusicNoteIcon from "@material-ui/icons/MusicNote";
+import FavoriteIcon from "@material-ui/icons/Favorite";
+import ModeCommentIcon from "@material-ui/icons/ModeComment";
+import SendIcon from "@material-ui/icons/Send";
+import MoreHorizIcon from "@material-ui/icons/MoreHoriz";
 import Ticker from "react-ticker";
 
 import "./styles.css";
@@ -37,6 +41,24 @@ const VideoFooter: React.FC<IVideoFooter> = ({
             </>
           )}
         </Ticker>
+      </div>
+      <div className="videoFooter__actions">
+        <div className="videoFooter__actionsLeft">
+          <FavoriteIcon font-size="large" />
+          <ModeCommentIcon font-size="large" />
+          <SendIcon font-size="large" />
+          <MoreHorizIcon font-size="large" />
+        </div>
+        <div className="videoFooter__actionsRight">
+          <div className="videoFooter__stat">
+            <FavoriteIcon />
+            <p>{likes}</p>
+          </div>
+          <div className="videoFooter__stat">
+            <ModeCommentIcon />
+            <p>{shares}</p>
+          </div>
+        </div>
       </div>
     </div>
   );
