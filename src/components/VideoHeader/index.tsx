@@ -1,11 +1,15 @@
 import React from 'react';
+import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos';
+import CameraOutlinedIcon from '@material-ui/icons/CameraOutlined';
 
 import './styles.css';
 
 const VideoHeader: React.FC = () => {
   return (
       <div className="videoHeader">
-          <h1>videoHeader</h1>
+          <ArrowBackIosIcon />
+            <h3>Reels</h3>
+          <CameraOutlinedIcon />
       </div>
   );
 }
