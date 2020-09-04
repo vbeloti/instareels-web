@@ -1,9 +1,21 @@
-import React from 'react';
+import React from "react";
 
-import './styles.css';
+import "./styles.css";
 
-const VideoFooter: React.FC = () => {
-  return <div />;
+interface IVideoFooter {
+  channel?: string;
+  avatarSrc?: string;
+  song?: string;
+  likes?: number;
+  shares?: number;
 }
+
+const VideoFooter: React.FC<IVideoFooter> = () => {
+  return (
+      <div className="videoFooter">
+          
+      </div>
+  );
+};
 
 export default VideoFooter;

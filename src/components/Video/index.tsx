@@ -2,8 +2,25 @@ import React, { useState, useRef } from "react";
 
 import "./styles.css";
 import VideoHeader from "../VideoHeader";
+import VideoFooter from "../VideoFooter";
 
-const Video: React.FC = () => {
+interface IVideos {
+  channel?: string;
+  avatarSrc?: string;
+  song?: string;
+  url?: string;
+  likes?: number;
+  shares?: number;
+}
+
+const Video: React.FC<IVideos> = ({
+  channel,
+  avatarSrc,
+  song,
+  url,
+  likes,
+  shares,
+}) => {
   const [isVideoPlaying, setIsVideoPlaying] = useState(false);
   const videoRef = useRef<HTMLVideoElement>(null);
 
@@ -11,9 +28,9 @@ const Video: React.FC = () => {
     if (isVideoPlaying) {
       videoRef?.current?.pause();
       setIsVideoPlaying(false);
-    }else {
-        videoRef?.current?.play();
-        setIsVideoPlaying(true);
+    } else {
+      videoRef?.current?.play();
+      setIsVideoPlaying(true);
     }
   };
 
@@ -24,8 +41,15 @@ const Video: React.FC = () => {
         ref={videoRef}
         onClick={onVideoPress}
         className="video__player"
-        src="https://scontent-gru2-1.cdninstagram.com/v/t50.2886-16/117742831_157949959208229_4879503339197693690_n.mp4?_nc_ht=scontent-gru2-1.cdninstagram.com&_nc_cat=109&_nc_ohc=r7DtZtnVRn8AX_Pxf9o&oe=5F5453B9&oh=4509703296be48390bf478e3fa3cd209"
+        src={url}
         loop
+      />
+      <VideoFooter 
+      channel={channel}
+      avatarSrc={avatarSrc}
+      song={song}
+      likes={likes}
+      shares={shares}
       />
     </div>
   );
